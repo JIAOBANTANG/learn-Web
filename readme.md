@@ -35,4 +35,4 @@
 ## 工具篇
 
 ### GIt
-* [Git](dosc/Git/Git.md)
+* [Git](desc/Git/Git.md)
