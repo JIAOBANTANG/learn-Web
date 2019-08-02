@@ -957,7 +957,11 @@ git remote remove 名称    				   // 删除一个关联的远程仓库
 2、关联远程仓库
 
 把本地仓库关联到远程仓库并为远程仓库起名来 origin （习惯于将关联的仓库起名为 origin）。
-
+~~~git
+##关联指令
+git remote add origin https://github.com/JIAOBANTANG/123.git
+git push -u origin master
+~~~
 ![image-20180822145020030](Git.assets/image-20180822145020030.png)
 
 
@@ -1158,12 +1162,6 @@ git pull                   # 先拉取别人的代码合并到本地，如果有
 git push                   # 将本地仓库推送到远程仓库
 ```
 
-
-
-
-
-
-
 # 其他
 
 ## Tag
@@ -1228,3 +1226,100 @@ chown -R www .
 chmod -R g+s .
 sudo -u www git pull
 现在向 GitHub 推送代码后，服务器将自动执行代码拉取，自动部署功能设置完成了。
+
+# 一些规范问题
+## 建立分支
+- master：当前可以用的稳定版本
+- develop：主要的开发分支
+- release：测试分支，主要和develop分支进行交互
+- feature-xxx：用来开发某一个功能的分支，开发完合并到develop分支
+- feature-xxx-fix：功能bug修复分支，feature分支合并之后发现bug，在develop上创建分支修复，之后合并回develop分支。
+- hostfix-xxx：紧急bug修改分支，在master分支上创建，修复完成后合并到 master
+## git 提交规范
+1. git commit message 格式
+    每次提交，Commit message 都包括三个部分：header，body 和 footer。
+        <type>(<scope>): <subject>
+        <BLANK LINE>
+        <body>
+        <BLANK LINE>
+        <footer>
+    其中，header 是必需的，body 和 footer 可以省略。
+2. Header 部分
+    Header部分只有一行，包括三个字段：type（必需）、scope（可选）和subject（必需）。
+    (1) type （用于说明 commit 的类别，只允许使用下面7个标识）
+
+            feat：新功能（feature）
+    
+            fix：修补bug
+    
+            docs：文档（documentation）
+    
+            style： 格式（不影响代码运行的变动）
+    
+            refactor：重构（即不是新增功能，也不是修改bug的代码变动）
+    
+            test：增加测试
+    
+            chore：构建过程或辅助工具的变动
+
+    (2) scope （用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同。）
+
+    (3) subject (subject是 commit 目的的简短描述，不超过50个字符)
+
+            以动词开头，使用第一人称现在时，比如change，而不是changed或changes
+    
+            第一个字母小写
+    
+            结尾不加句号（.）
+    
+3. Body 部分
+
+    Body 部分是对本次 commit 的详细描述，可以分成多行。下面是一个范例。
+
+        More detailed explanatory text, if necessary.  Wrap it to 
+        about 72 characters or so. 
+    
+        Further paragraphs come after blank lines.
+    
+        - Bullet points are okay, too
+        - Use a hanging indent
+
+    有几个注意点:
+
+        使用第一人称现在时，比如使用change而不是changed或changes。
+    
+        永远别忘了第2行是空行
+    
+        应该说明代码变动的动机，以及与以前行为的对比。
+
+3. Footer
+
+    Footer 部分只用于以下两种情况：
+
+    (1) 不兼容变动
+
+    如果当前代码与上一个版本不兼容，则 Footer 部分以BREAKING CHANGE开头，后面是对变动的描述、以及变动理由和迁移方法。
+
+        BREAKING CHANGE: isolate scope bindings definition has changed.
+    
+        To migrate the code follow the example below:
+    
+        Before:
+    
+        scope: {
+        myAttr: 'attribute',
+        }
+    
+        After:
+    
+        scope: {
+        myAttr: '@',
+        }
+    
+        The removed `inject` wasn't generaly useful for directives so there should be no code using it.
+    
+    (2) 关闭 Issue
+
+    如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue 。
+
+        Closes #234
