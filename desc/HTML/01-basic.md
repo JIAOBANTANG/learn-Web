@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="../../images/learn.png" width="600"/>
+	<img src="https://github.com/JIAOBANTANG/learn-Web/raw/master/images/learn.png" width="600"/>
 </p>
 
 
