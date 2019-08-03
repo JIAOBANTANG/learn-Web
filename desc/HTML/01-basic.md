@@ -196,3 +196,48 @@ type 属性
 ~~~
 #### 电子邮箱链接
 `< a href=“mailto:邮件地址”>……</a>`
+mailto 四个常用的参数
+- subject -- 代表邮件的标题
+- body -- 代表邮件的内容
+- cc -- 代表一个抄送对象
+- bcc -- 代表一个暗送对象
+~~~html
+< a href="mailto:jiaobantang@gmail.com?subject=你好啊&body=啥都没有?cc=你的邮箱">给不发送一封简单邮件</a>
+~~~
+## 表格
+~~~html
+    <table border="1"> <!--表格 -->
+        <caption>我是标题</caption><!--表格标题 居中显示-->
+        <tr><!--行-->
+            <th><!--表头-->
+                列名
+            </th>
+            <th>
+                我是表头
+            </th>
+        </tr>
+        <tr>
+            <td><!--单元格-->
+                我知道
+            </td>
+            <td>
+                我知道
+            </td>
+        </tr>
+    </table>
+~~~
+### table 属性
+`border：`表格边框 cellspacing：单元格间的间距
+`cellpadding：`单元格的内容与其边框的内边距 align：表格的对齐方式，通常是left，center，right
+`bgcolor：`表格的背景颜色 background：表格的背景图片
+`width：`表格宽度 height：表格高度
+`border-collaspe：`collaspe：边框合并，不叠加 cellspacing：0：边框合并，但合并之后的边框宽度等于前两个边框宽度之和
+### 单元格属性
+`width：`单元格宽度height：单元格高度
+`align：`单元格内文本的对齐方式,通常是左，中，右 left，center，right
+`valign：`单元格内文本的对齐方式,通常是上，中，下 top，middle，bottom
+`nowrap：`在为设置单元格宽度时，当文本长度宽于单元格宽度，将要换行时，该标签会使其不换行
+
+### 单元格跨行跨列
+`rowspan：`跨行标签，表示跨了多少行
+`colspan：`跨列标签，表示跨了多少列
