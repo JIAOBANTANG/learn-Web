@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        form {
+            width: 30%;
+            margin: 20px auto;
+
+        }
+
+        input::-webkit-input-placeholder {
+            color: pink;
+        }
+
+        input[type=text] {
+            color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="" method="post">
+        <fieldset>
+            <legend>表单</legend>
+            <label for="">姓名</label>
+            <input type="text" name="" id="" required disabled placeholder="姑娘留名"><br>
+            <label for="">密码 </label>
+            <input type="password" required name="password" id=""><br>
+            <label for="">爱好</label>
+            <input type="checkbox" name="hobby" value="xiyan" checked id="">吸烟
+            <input type="checkbox" name="hobby" value="hejiu" id="">喝酒
+            <input type="checkbox" name="hobby" value="tangtou" id="">烫头<br>
+            <label for="">性别</label>
+            <input type="radio" name="sex" value="man" checked id="">男<br>
+            <input type="radio" name="sex" value="woman" id="">女<br>
+            <label for="">学历</label>
+           <select name="" id="">
+               <option value="1">专科</option>
+               <option value="2" selected >本科</option>
+               <option value="3">研究生</option>
+               <option value="4">硕士</option>
+           </select><br>
+           <label for="">上传头像</label>
+           <input type="file" name="avatar[]" accept="image/png, image/jpeg, image/gif, image/jpg" multiple id=""><br>
+           <label for="">自我评价</label>
+           <textarea name="self" id="" cols="30" rows="10"></textarea><br>
+           <label for="">技能掌握程度</label>
+           <input type="range" name="" value="20" id=""><br>
+           <label for="">喜欢的颜色</label>
+           <input type="color" name="" id=""><br>
+           <label for="">时间日期</label>
+           <input type="datetime-local" name="datetime" id=""><br>
+           <input type="hidden" name="h" value="1"><br>
+           <input type="number" name="" step="0.01" max="10" min="0" id=""><br>
+           <input type="email" name="" id=""><br>
+           <input type="url" name="" id=""><br>
+           <input type="search" autocomplete  name="" id=""><br>
+           <input type="reset" value="重置">
+           <input type="submit" value="提交">
+
+
+
+        </fieldset>
+    </form>
+</body>
+
+</html>
