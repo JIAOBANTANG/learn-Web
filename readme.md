@@ -4,7 +4,7 @@
 	<img src="./images/jiaobantang.jpg" width="100"/>
 </a>
 <a href="##" target="_blank">
-	<img src="http://cdn.treelo.xin/4.gif" width="200"/>
+	<img src="http://cdn.treelo.xin/4.gif" width="80"/>
 </a>
 <a href="https://github.com/helianthus-q" target="_blank">
 	<img src="./images/helianthus-q.jpg" width="100"/>
@@ -40,9 +40,11 @@
 * [Git](desc/Git/Git.md)
 * [Markdown](desc/Markdown/Markdown.md)
 ## 三架马车篇
-### HTML和HTML5
+### HTML5
 * [HTML5](desc/HTML/HTML5.md)
+### CSS3
 - [CSS3](desc/CSS/CSS3.md)
-- [JavaScript3](desc/javaScript/JavaScript.md)
+### Javascript
+- [JavaScript](desc/JavaScript/JavaScript.md)
 
 
