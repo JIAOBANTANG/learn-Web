@@ -3,6 +3,9 @@
 <a href="https://github.com/jiaobantang" target="_blank">
 	<img src="./images/jiaobantang.jpg" width="100"/>
 </a>
+<a href="##" target="_blank">
+	<img src="http://cdn.treelo.xin/4.gif" width="200"/>
+</a>
 <a href="https://github.com/helianthus-q" target="_blank">
 	<img src="./images/helianthus-q.jpg" width="100"/>
 </a>
@@ -31,6 +34,7 @@
 - [三架马车篇](#三架马车篇)
     - [HTML](#HTML)
     - [CSS3](#CSS3)
+    - [JavaScript](#JavaScript)
 ## 工具篇
 ### GIt
 * [Git](desc/Git/Git.md)
@@ -39,4 +43,6 @@
 ### HTML和HTML5
 * [HTML5](desc/HTML/HTML5.md)
 - [CSS3](desc/CSS/CSS3.md)
+- [JavaScript3](desc/javaScript/JavaScript.md)
+
 

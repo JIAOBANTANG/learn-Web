@@ -1,19 +1,17 @@
 ---
  学习目标:
-
-  - 了解常用浏览器
-  - 掌握WEB标准
-  - 理解标签语义化
-  - 掌握常用的排版标签
-  - 掌握常用的文本格式化图像链接等标签
-  - 掌握三种列表标签
-  - 掌握表格标签
-  - 掌握表格标签
-  - 掌握表单标签
-  - 掌握H5新增表单和表单属性
+   了解常用浏览器
+   掌握WEB标准
+   理解标签语义化
+   掌握常用的排版标签
+   掌握常用的文本格式化图像链接等标签
+   掌握三种列表标签
+   掌握表格标签
+   掌握表格标签
+   掌握表单标签
+   掌握H5新增表单和表单属性
 typora-copy-images-to: media
 ---
-
 
 
 # 认识网页
@@ -979,6 +977,8 @@ for 属性规定 label 与哪个表单元素绑定。
 
 - aside：定义其所处内容之外的内容 侧边
 
+
+
   ~~~html
   <header> 语义 :定义页面的头部  页眉</header>
   <nav>  语义 :定义导航栏 </nav> 
@@ -988,8 +988,15 @@ for 属性规定 label 与哪个表单元素绑定。
   <aside> 语义： 定义其所处内容之外的内容 侧边</aside>
   ~~~
 
-  ​
-
+*语义化结构*
+![](images\yuyi.png)
+*处理语义化兼容问题*
+~~~html
+ // lte 的意思是: l(小于)  t   e(等于)   组合起来就是: 小于等于 IE 8 
+ <!--[if lte IE 8]>
+    <script src="https://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+  <![endif]-->
+~~~
 - datalist   标签定义选项列表。请与 input 元素配合使用该元素
 
   ~~~html
@@ -1033,7 +1040,6 @@ for 属性规定 label 与哪个表单元素绑定。
 | **datetime****** | <input type="datetime"> | 时间         |
 | **month******    | <input type="month">    | 月年         |
 | **week******     | <input type="week">     | 星期 年       |
-
 ## 
 
 ## 常用新属性
@@ -1047,10 +1053,7 @@ for 属性规定 label 与哪个表单元素绑定。
 | **required******     | <input type="text" required>             | 必填项  内容不能为空                              |
 | **accesskey******    | <input type="text" accesskey="s">        | 规定激活（使元素获得焦点）元素的快捷键   采用 alt + s的形式      |
 
-
-
 ## 综合案例
-
 ~~~html
 <form action="">
   <fieldset>
@@ -1186,11 +1189,46 @@ height 设置播放窗口的高度
 ![1498468097509](media/1498468097509.png)
 
 
-# 总结
+## 网络检测API
+`在原生APP中,比如QQ,它可以检测QQ是处于在线还是离线状态,但是在网页中,或者早期web app中,没有	检测网络状态的能力,因此在HTML5中出现了网络状态检测API`
+### 网站状态检测事件
+~~~js
+//online 在线
+  window.addEventListener('online',function(){})
 
- HTML 第二天的主题：
+//offline 离线
+  window.addEventListener('offline',function(){})
 
-  熟悉列表---  会使用表格  ---  掌握常用表单 
+/*注意: 网络状态检测检测网络状态变化的瞬间的情况
+      网络状态检测的是正常情况(wifi,局域网)*/
+~~~
+## 客户端存储
+### WebStorage介绍
+`所谓的WebStorage指的是客户端存储,在这里指的是浏览器端存储,比如在网站上自动登陆这些功能,其实就是把一些少量的数据存储在浏览器等客户端中,这样可以减少没必要的请求到服务器,降低服务器的压力,给用户提供更好的体验.`
 
+### WebStorage的三种存储方式(重点)
+- cookie: 广泛使用 存储量4kb左右 会在浏览器和服务器间传递  一般由服务器端创建 可以设置存储时间(默认和session一样) cookie不容易操作 jquery.cookie.js插件
 
+- session(会话)Storage: H5新增 存储量5M左右 只会在浏览器存储数据(浏览器的内存中) 只会由浏览器端创建 存储时间是打开浏览器开始关闭浏览器消失  方法简洁明了 容易操作
+- local(本地)Storage: H5新增 存储量5M左右 只会在浏览器存储数据(存储在硬盘中) 只会由浏览器端创建 永久存储除非手动删除 方法简介明了 容易操作
 
+~~~js
+//语法
+//localStorage
+window.localStorage.setItem(key,value);//添加数据
+window.localStorage.getItem(key);//获取数据
+window.localStorage.removeItem(key);//移除数据
+window.localStorage.clear();//清除数据
+window.localStorage.key(n);//获取key
+//应用场景: 网页换肤 京东购物车 存储Token
+//sessionStorage
+window.sessionStorage.setItem(key,value);//添加数据: 
+window.sessionStorage.getItem(key);//获取数据
+window.sessionStorage.removeItem(key);//移除数据
+window.sessionStorage.clear();//清除数据
+window.sessionStorage.key(n从0开始);//获取key 
+//应用场景: 存储一些少量临时的数据(比较少用)
+//其他注意点
+//1.localStorage和sessionStorage只能存储json数据结构
+//2.存储的数据不能太多 太多浏览器会卡
+~~~
