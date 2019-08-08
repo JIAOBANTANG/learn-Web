@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+   <a id="link" href="http://www.baidu.com">百度</a>
+   <script>
+     var link = document.getElementById('link');
+     link.onclick = function () {
+       alert('点击我了');
+
+       // 取消a标签的默认行为（跳转到href）
+       return false;
+     }
+   </script>
+</body>
+</html>

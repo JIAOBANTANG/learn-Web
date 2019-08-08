@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <input type="button" value="按钮" id="btn">
+  <script>
+    var btn = document.getElementById('btn');
+    // btn.onclick = function () {
+    //   alert('hello world');
+    //   // 移除事件
+    //   btn.onclick = null;
+    // }
+    // 
+    // 如果想要移除事件，注册事件的时候不能使用匿名函数
+    // btn.addEventListener('click', function () {
+    //   alert('hello world'); 
+    //   // 移除事件
+    //   btn.removeEventListener('click', )
+    // });
+    // 
+    // function btnClick () {
+    //   alert('hello world');
+    //   // 移除事件
+    //   btn.removeEventListener('click', btnClick);
+    // }
+    // btn.addEventListener('click', btnClick);
+    // 
+    // chrome 中不支持attachEvent。 IE9-10
+    function btnClick() {
+      alert('hello world');
+      // 移除事件
+      btn.detachEvent('onclick', btnClick);
+    }
+    btn.attachEvent('onclick', btnClick);
+  </script>
+</body>
+</html>

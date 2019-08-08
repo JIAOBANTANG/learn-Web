@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      height: 1000px;
+    }
+    #box {
+      margin: 100px;
+      margin-top: 500px;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+  </div> 
+  <script>
+    var box = document.getElementById('box');
+    box.onclick = function (e) {
+      e = e || window.event;
+
+      // 获取的鼠标在浏览器的可视区域的坐标
+      // console.log(e.clientX);
+      // console.log(e.clientY);
+
+      // 鼠标在当前页面的位置
+      console.log(e.pageX);
+      console.log(e.pageY);
+
+    }
+
+  </script>
+</body>
+</html>

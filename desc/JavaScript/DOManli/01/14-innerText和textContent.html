@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box">
+    我是一个box
+    <b>hello</b>
+  </div>
+  <script>
+    // innerText  最早出现在IE浏览器中
+    // 
+    // 浏览器兼容问题
+    // 
+    // 老版本的firefox浏览器不支持innerText
+    // 2016的时候 已经把innerText 在DOM中规定为正式的标准属性
+    // 
+    // textContent
+    
+    var box = document.getElementById('box');
+    // 都会把标签过滤
+    // 前后的空白和一些换行去掉
+    console.log(box.innerText);
+    // 原封不动的把内容输出
+    console.log(box.textContent);
+  </script>
+</body>
+</html>

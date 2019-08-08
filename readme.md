@@ -47,5 +47,8 @@
 - [CSS3](desc/CSS/CSS3.md)
 ### Javascript
 - [JavaScript](desc/JavaScript/JavaScript.md)
+- [WebAPI](desc/JavaScript/WebApi.md)
+- [JavaScript高级](desc/JavaScript/HighJS.md)
+
 
 
