@@ -1,4 +1,4 @@
-#表单
+# 表单
 [Forms](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Forms)
 `表单(Form)是 HTML 的一个重要部分，主要用于采集和提交用户输入的信息。`
 *学习 HTML 表单(Form)最关键要掌握的有三个要点：*

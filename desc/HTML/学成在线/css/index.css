@@ -1,0 +1,90 @@
+@import '../font/iconfont.css';
+nav{
+    /* width: 80%; */
+    height: 80px;
+    width: 1366px;
+    margin: 0 auto;
+}
+nav .left,nav .right{
+    height: 80px;
+    line-height: 80px;
+}
+
+nav .left{
+    float: left;
+    width: 50%;
+}
+nav .left a {
+    display:inline-block;
+    height: 100%;
+    margin:0 10px;
+    text-decoration: none;
+    color:black;
+}
+nav .left a:hover{
+    color:#00a4ff;
+}
+nav .left a:first-child img {
+  position: relative;
+  top: 20px;
+  margin-right: 10px;
+}
+nav .right{
+    float: right;
+    width: 50%;
+}
+nav .right div{
+    display: inline-block;
+}
+nav .right input[type=search]{
+    width: 360px;
+    height: 45px;
+    border:1.5px solid #00a4ff;
+}
+nav .right span i{
+    padding: 11.5px 22px;
+    background-color:#00a4ff;
+    font-size: 22px;
+    color:#fff;
+    vertical-align:bottom;
+    margin-right: 10px;
+}
+nav .right a{
+    display:inline-block;
+    height: 100%;
+    margin:0 10px;
+    text-decoration: none;
+    color:black;
+}
+
+nav .right a:hover{
+    color:#00a4ff;
+}
+
+nav .right a i{
+    color:#555;
+}
+.dian{
+    position: relative;
+    top: -51px;
+    right: -14px;
+    display: block;
+    width: 6.5px;
+    height: 6.5px;
+    border-radius: 50%;
+    background-color:red;
+}
+
+nav .right img{
+    margin: -8px 10px;
+}
+section{
+    width: 100%;
+    height: 600px;
+    background-color: blue;
+}
+
+.swiper-container {
+    width: 600px;
+    height: 300px;
+}  
