@@ -716,3 +716,4 @@ console.log(box.scrollHeight)
 ### 元素的类型
 
 ![1497169919418](media/1497169919418.png)
+

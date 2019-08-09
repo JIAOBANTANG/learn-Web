@@ -166,21 +166,19 @@ HTML（英文Hyper Text Markup Language的缩写）中文译为“超文本标�
 同理：HTML 有自己的语言语法骨架格式：
 
 ```html
-<HTML>   
-    <head>     
-        <title></title>
-    </head>
-    <body>
-    </body>
-</HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
 ```
-
-课堂练习1：    书写我们的第一个HTML 页面！
-
-1. 新建一个demo 的 TXT 文件。
-2. 里面写入刚才的HTML 骨架。
-3. 把后缀名改为 .HTML。
-4. 右击--谷歌浏览器打开。
 
 ~~~
 1 HTML标签：
@@ -266,61 +264,17 @@ p,h,a,b,u,i,s,em,del,ins,strong,img
 
 <img src="media/xiong.jpg">
 
-测试题：
-
-```
-请问下列哪个标签是错误的？
-```
-
-```
-A  <head></head><body></body>
-```
-
-```
-B  <strong><div></div></strong>
-```
-
-```
-C  <head><title></head></title>
-```
-
-```
-D  <body><div></div></body>
-```
-
-
 
  倡议： 如果两个标签之间的关系是嵌套关系，子元素最好缩进一个tab键的身位。如果是并列关系，最好上下对齐。
 
 # 开发工具
-
- 这些工具你认识几个？
-
  <img src="media/s.png" />
-
-  普通青年    Dreamweaver
-
-  文艺青年    sublime
-
-  高手和傻子  用记事本
-
-  其实。。。。
-
-  <img src="media/node.png" />
-
-  <a href="key.HTML" target="_blank">sublime 一些常用快捷键  点我查看 </a>
-
-
+~~~
+再页面中输入  
+ !
+在vs code 弹出提示回车即可生成HTML骨架
 
 ~~~
-再页面中输入 以下2个单词
-1.  html: 5   
-2.  !
-   在sublime里面然后按下tab键盘即可生成HTML骨架
-
-~~~
-
-
 
 # 文档类型<!DOCTYPE>
 
@@ -388,15 +342,12 @@ UTF-8则包含全世界所有国家需要用到的字符
  单词缩写：  head   头部. 标题 
 
 为了使网页更具有语义化，我们经常会在页面中用到标题标签，HTML提供了6个等级的标题，即
-
+~~~html
  <h1>、<h2>、<h3>、<h4>、<h5>和<h6>
-
 ~~~
+
 标题标签语义：  作为标题使用，并且依据重要性递减
-~~~
-
 其基本语法格式如下：
-
 ```html
 <hn>   标题文本   </hn>
 ```
@@ -613,7 +564,7 @@ base 写到  <head>  </head>  之间
 
 绝对路径
 
-“D:\web\img\logo.gif”，或完整的网络地址，例如“http://www.itcast.cn/images/logo.gif”。
+“D:\web\img\logo.gif”，或完整的网络地址，例如“http://www.demo.cn/images/logo.gif”。
 
 
 
@@ -723,9 +674,6 @@ base 写到  <head>  </head>  之间
 <img src="media/a.png" width="1000" />
 
 # 表格 table(会使用)
-
-![img](http://zcr4.ncfstatic.com/attachment/201403/27/10/5333888008f05_thumb_670x0.jpg)
-
 
 
 存在即是合理的。  表格的现在还是较为常用的一种标签，但不是用来布局，常见处理、显示表格式数据。
@@ -1027,31 +975,29 @@ for 属性规定 label 与哪个表单元素绑定。
 
 ## 新增的input type属性值：
 
-| **类型******       | **使用示例******            | **含义****** |
+| **类型**、       | **使用示例**            | **含义** |
 | ---------------- | ----------------------- | ---------- |
-| **email******    | <input type="email">    | 输入邮箱格式     |
-| **tel******      | <input type="tel">      | 输入手机号码格式   |
-| **url******      | <input type="url">      | 输入url格式    |
-| **number******   | <input type="number">   | 输入数字格式     |
-| **search******   | <input type="search">   | 搜索框（体现语义化） |
-| **range******    | <input type="range">    | 自由拖动滑块     |
-| **time******     | <input type="time">     | 小时分钟       |
-| **date******     | <input type="date">     | 年月日        |
-| **datetime****** | <input type="datetime"> | 时间         |
-| **month******    | <input type="month">    | 月年         |
-| **week******     | <input type="week">     | 星期 年       |
-## 
-
+| **email**    | <input type="email">    | 输入邮箱格式     |
+| **tel**      | <input type="tel">      | 输入手机号码格式   |
+| **url**     | <input type="url">      | 输入url格式    |
+| **number**  | <input type="number">   | 输入数字格式     |
+| **search**   | <input type="search">   | 搜索框（体现语义化） |
+| **range**    | <input type="range">    | 自由拖动滑块     |
+| **time**     | <input type="time">     | 小时分钟       |
+| **date**    | <input type="date">     | 年月日        |
+| **datetime**| <input type="datetime"> | 时间         |
+| **month**  | <input type="month">    | 月年         |
+| **week***  | <input type="week">     | 星期 年       |
 ## 常用新属性
 
-| **属性******           | **用法******                               | **含义******                               |
+| **属性**         | **用法**                             | **含义**                             |
 | -------------------- | ---------------------------------------- | ---------------------------------------- |
-| **placeholder******  | <input type="text" placeholder="请输入用户名"> | 占位符  当用户输入的时候 里面的文字消失  删除所有文字，自动返回       |
-| **autofocus******    | <input type="text" autofocus>            | 规定当页面加载时 input 元素应该自动获得焦点                |
-| **multiple******     | <input type="file" multiple>             | 多文件上传                                    |
-| **autocomplete****** | <input type="text" autocomplete="off">   | 规定表单是否应该启用自动完成功能  有2个值，一个是on 一个是off      on 代表记录已经输入的值  1.autocomplete 首先需要提交按钮 <br/>2.这个表单您必须给他名字 |
-| **required******     | <input type="text" required>             | 必填项  内容不能为空                              |
-| **accesskey******    | <input type="text" accesskey="s">        | 规定激活（使元素获得焦点）元素的快捷键   采用 alt + s的形式      |
+| **placeholder**| <input type="text" placeholder="请输入用户名"> | 占位符  当用户输入的时候 里面的文字消失  删除所有文字，自动返回       |
+| **autofocus**  | <input type="text" autofocus>            | 规定当页面加载时 input 元素应该自动获得焦点                |
+| **multiple**   | <input type="file" multiple>             | 多文件上传                                    |
+| **autocomplete** | <input type="text" autocomplete="off">   | 规定表单是否应该启用自动完成功能  有2个值，一个是on 一个是off      on 代表记录已经输入的值  1.autocomplete 首先需要提交按钮 <br/>2.这个表单您必须给他名字 |
+| **required**   | <input type="text" required>             | 必填项  内容不能为空                              |
+| **accesskey**  | <input type="text" accesskey="s">        | 规定激活（使元素获得焦点）元素的快捷键   采用 alt + s的形式      |
 
 ## 综合案例
 ~~~html
